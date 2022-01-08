@@ -1,3 +1,4 @@
+/*
 package com.kozlovskaya.spring.online.store.validators;
 
 import com.kozlovskaya.spring.online.store.dto.UserRegistrationDto;
@@ -26,3 +27,4 @@ public class UserRegistrationValidator {
 
     }
 }
+*/

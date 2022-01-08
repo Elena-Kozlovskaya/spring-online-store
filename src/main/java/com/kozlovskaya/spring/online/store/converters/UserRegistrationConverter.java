@@ -1,3 +1,4 @@
+/*
 package com.kozlovskaya.spring.online.store.converters;
 
 import com.kozlovskaya.spring.online.store.dto.UserRegistrationDto;
@@ -14,3 +15,4 @@ public class UserRegistrationConverter {
         return new UserRegistrationDto(user.getId(), user.getUsername(), user.getPassword(), user.getEmail());
     }
 }
+*/

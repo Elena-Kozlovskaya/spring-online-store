@@ -109,6 +109,13 @@ angular.module('homework_app', ['ngStorage']).controller('indexController', func
             });
     }
 
+    $scope.createOrder = function () {
+        $http.get('http://localhost:8189/homework_app/api/v1/orders')
+            .then(function (response) {
+                alert('Order created');
+            });
+    }
+
     /*$scope.loadCart = function () {
         $http.get(contextPath + '/carts')
             .then(function (response) {

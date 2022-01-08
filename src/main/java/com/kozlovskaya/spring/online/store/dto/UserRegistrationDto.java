@@ -1,3 +1,4 @@
+/*
 package com.kozlovskaya.spring.online.store.dto;
 
 import lombok.AllArgsConstructor;
@@ -13,3 +14,4 @@ public class UserRegistrationDto {
     private String password;
     private String email;
 }
+*/

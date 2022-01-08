@@ -19,6 +19,4 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
 
     @Query("select p from Product p where p.cost < ?1")
     List<Product> findAllByCostLessThanMax(Integer max);
-
-
 }
