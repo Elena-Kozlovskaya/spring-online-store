@@ -20,30 +20,29 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
     private final ProductService productService;
-    private Order order;
 
-    public void createNewOrder(String address, String phone, User user) {
-        this.order = new Order();
-        this.order.setUser(user);
-        this.order.setTotalPrice(cartService.getCurrentCart().getTotalPrice());
-        this.order.setAddress(address);
-        this.order.setPhone(phone);
-        this.order.setOrderItems(createOrderDetails(user));
-        orderRepository.save(this.order);
+    public Order createNewOrder(String address, String phone, User user) {
+        Order order = new Order();
+        order.setUser(user);
+        order.setTotalPrice(cartService.getCurrentCart().getTotalPrice());
+        order.setAddress(address);
+        order.setPhone(phone);
+        orderRepository.save(order);
+        return order;
     }
 
-    public List<OrderItem> createOrderDetails(User user) {
+    public void createOrderDetails(Order order) {
         List<OrderItemDto> orderItemDtos = cartService.getCurrentCart().getItems();
         List<OrderItem> orderItems = orderItemDtos
                 .stream()
                 .map(p -> new OrderItem(productService.findById(p.getProductId()).orElseThrow(() -> new ResourceNotFoundException("Товар не найден, id: " + p.getProductId())),
-                        user,
+                        order.getUser(),
                         order,
                         p.getQuantity(),
                         p.getPricePerProduct(),
                         p.getPrice()))
                 .collect(Collectors.toList());
         orderItemRepository.saveAll(orderItems);
-        return orderItems;
     }
+
 }
