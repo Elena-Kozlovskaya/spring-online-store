@@ -108,18 +108,17 @@
   </table>
   <p>
     <button class="btn btn-secondary" ng-click="clearCart()">Очистить корзину</button>
-    <button class="btn btn-primary" ng-click="createOrder()">Оформить заказ</button>
   </p>
-  <!--<p></p>
+  <p></p>
 
-  <form novalidate ng-click="createNewOrder()">
+  <form class="row g-3" ng-submit="createNewOrder()">
     <input class="form-control" type="text" placeholder="Адрес" ng-model="newOrder.address">
     <p></p>
     <input class="form-control" type="text" placeholder="Телефон" ng-model="newOrder.phone">
     <p></p>
     <button type="submit" class="btn btn-primary">Оформить заказ</button>
   </form>
-  <p></p>-->
+  <p></p>
 
 <p>
   <button class="btn btn-danger" ng-click="showCurrentUserInfo()">Обо мне</button>
