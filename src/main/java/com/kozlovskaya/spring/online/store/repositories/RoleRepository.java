@@ -1,3 +1,4 @@
+/*
 package com.kozlovskaya.spring.online.store.repositories;
 
 import com.kozlovskaya.spring.online.store.entities.Role;
@@ -14,3 +15,4 @@ public interface RoleRepository extends CrudRepository<Role, Long> {
     Collection<Role> findByRoleName(String name);
 
 }
+*/

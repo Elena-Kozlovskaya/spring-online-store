@@ -1,3 +1,4 @@
+/*
 package com.kozlovskaya.spring.online.store.controllers;
 
 import com.kozlovskaya.spring.online.store.converters.UserRegistrationConverter;
@@ -24,3 +25,4 @@ public class RegistrationController {
         userService.createNewUser(user);
     }
 }
+*/

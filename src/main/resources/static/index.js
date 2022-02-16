@@ -109,6 +109,20 @@ angular.module('homework_app', ['ngStorage']).controller('indexController', func
             });
     }
 
+    $scope.createNewOrder = function () {
+        $http.post('http://localhost:8189/homework_app/api/v1/orders', $scope.newOrder)
+            .then(function (response) {
+                if ($scope.newOrder.address) {
+                    $scope.newOrder.address = null;
+                }
+                if ($scope.newOrder.phone) {
+                    $scope.newOrder.phone = null;
+                }
+            });
+    }
+
+
+
     /*$scope.loadCart = function () {
         $http.get(contextPath + '/carts')
             .then(function (response) {

@@ -31,6 +31,7 @@ public class CartService {
        }
     }
 
+
     public void clear(){
         getCurrentCart().clear();
     }
